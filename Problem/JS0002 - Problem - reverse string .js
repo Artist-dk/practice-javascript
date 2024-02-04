@@ -1,5 +1,5 @@
 // Reverse a String
-..
+
 
 var str = "Hello"
 var arr = str.split("")
