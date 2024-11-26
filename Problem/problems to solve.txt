@@ -1,0 +1,135 @@
+// Deep Type Checking:
+// Write a function deepTypeCheck(value) that determines if a value is primitive or non-primitive and prints its type.
+
+// Clone an Object:
+// Write a function to clone an object and demonstrate that modifying the clone doesn't affect the original.
+
+// Count Character Frequency:
+// Write a program that takes a string input and returns an object representing the frequency of each character.
+
+// Unique Values in an Array:
+// Use a Set to find and print the unique values in an array.
+
+// Map Operations:
+// Write a program that demonstrates the use of Map. Add, retrieve, and delete entries, then print all entries.
+
+// Compare Two Objects:
+// Write a function to check if two objects have the same keys and values.
+
+// RegExp Matching:
+// Write a program that validates an email address using a regular expression.
+
+// Challenge Problems
+// Nested Object Traversal:
+// Write a function to retrieve a deeply nested value from an object.
+
+// Dynamic Type Checker:
+// Write a utility function that takes an array of mixed data types and returns an object summarizing the count of each type.
+
+
+
+// --------- methods/functions
+
+Beginner Level
+Basic Function Usage:
+
+Write a function to add two numbers and return the result.
+Create a function to check if a number is even or odd.
+Write a function that takes a string and returns its length.
+Default Parameters:
+
+Write a function to calculate the area of a rectangle with default values for length and width.
+Arrow Functions:
+
+Convert a traditional function to an arrow function.
+Callback Functions:
+
+Write a function that takes another function as an argument and executes it.
+Intermediate Level
+Factorial:
+
+Create a function to compute the factorial of a number (both iterative and recursive versions).
+Palindromes:
+
+Write a function to check if a given string or number is a palindrome.
+Array Operations:
+
+Implement a function to find the largest number in an array.
+Create a function to filter even numbers from an array.
+Write a function to reverse an array.
+String Manipulations:
+
+Write a function to capitalize the first letter of every word in a string.
+Implement a function to count the vowels in a string.
+Prime Numbers:
+
+Create a function that checks if a number is prime.
+Write a function to generate an array of prime numbers up to a given limit.
+Object Operations:
+
+Write a function that returns the keys and values of an object as separate arrays.
+Create a function to merge two objects.
+Advanced Level
+Closures:
+
+Write a function that returns another function, which increments a counter.
+Higher-Order Functions:
+
+Implement a custom map function.
+Create a function to flatten a nested array using recursion.
+Currying:
+
+Write a function that takes one argument at a time and eventually sums them.
+Debouncing:
+
+Implement a debounce function that delays the execution of another function.
+Memoization:
+
+Create a function that memoizes results of expensive calculations like Fibonacci series.
+Custom Sorting:
+
+Write a function to sort an array of objects by a specified key.
+Custom Reduce:
+
+Implement your version of the reduce function for arrays.
+Algorithmic Challenges
+Fibonacci Sequence:
+
+Write a function to generate the first n numbers of the Fibonacci sequence.
+Anagrams:
+
+Write a function to check if two strings are anagrams.
+Deep Clone:
+
+Implement a function to deeply clone an object or array.
+Array Difference:
+
+Write a function that returns the difference between two arrays.
+Flatten Nested Objects:
+
+Write a function to flatten a deeply nested object into a single-level object.
+Real-World Scenarios
+Random Number Generator:
+
+Write a function to generate a random number within a given range.
+Unique Values:
+
+Create a function to find unique values in an array.
+Pagination:
+
+Write a function to split an array into pages of a given size.
+Event Emitter:
+
+Build a simple event emitter function to manage custom events.
+Validation:
+
+Write a function to validate an email address format.
+Throttling:
+
+Implement a throttle function that limits how frequently a function can be called.
+Deep Equals:
+
+Create a function to check deep equality between two objects.
+Custom Filter:
+
+Implement your own version of the filter method.

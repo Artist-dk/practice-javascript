@@ -14,21 +14,6 @@ console.log(typeof data)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Count Words: Write a program to count the number of words in a string using variables.
 
 // Sum of Array: Use a variable to store the sum of an array of numbers. Iterate through the array and update the variable.
