@@ -40,6 +40,5 @@ describe("Assertions demo", () => {
     cy.get("input[placeholder='Username'").type("Admin")  // provide a value into inputbox
     cy.get("input[placeholder='Username']").should('have.value','Admin') // value
 
-
   })
 })
