@@ -1,44 +1,36 @@
-// cypress - assertsions
+describe('Flipkart Search Bar Test', () => {
+  beforeEach(() => {
+    // Visit Flipkart's website
+    cy.visit('https://www.flipkart.com');
 
-// assertions on web elements
+    // Close the login modal if it appears
+    cy.get('body').then(($body) => {
+      if ($body.find('._2QfC02 button').length > 0) {
+        cy.get('._2QfC02 button').click();
+      }
+    });
+  });
 
-// const cypress = require("cypress")
-// const {describe} = require("mocha")
+  it('Should allow searching for a product', () => {
+    // Select the search bar and type a product name
+    cy.get('input[title="Search for Products, Brands and More"]').type('laptop');
 
-describe("Assertions demo", () => {
-  it("Implicit assertions", () => {
-    cy.visit("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    // Click the search button
+    cy.get('._2iLD__').click();
 
-    // should, and
+    // Assert that search results are displayed
+    cy.url().should('include', 'search?q=laptop');
+    // cy.get('._1YokD2 ._1AtVbE').should('have.length.greaterThan', 0); // Check that results are displayed
+  });
 
-    // cy.url().should('include','orangehrmlive.com')
-    // cy.url().should('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    // cy.url().should('contain', 'orangehrm')
+  it('Should display no results message for an invalid search term', () => {
+    // Search for a random term that is unlikely to have results
+    cy.get('input[title="Search for Products, Brands and More"]').type('randominvalidsearchterm1234');
 
-    // below block is same as above
+    // Click the search button
+    cy.get('button[type="submit"]').click();
 
-    // cy.url().should('include','orangehrmlive.com')
-    // .should('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    // .should('contain', 'orangehrm')
-
-    // below block is same as above 2 code blocks
-
-    cy.url().should('include','orangehrmlive.com')
-    .and('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    .and('contain', 'orangehrm')
-    .and('not.contain', 'greenhrm')
-
-    cy.title().should('include', `Orange`)
-    .and('eq', "OrangeHRM")
-    .and('contain', 'HRM')
-
-    cy.get('.orangehrm-login-branding > img').should('be.visible')  // Logo visible
-    .and('exist') // logo exist
-
-    // cy.xpath("//a").should('have.length', '1')  // No of links
-
-    cy.get("input[placeholder='Username'").type("Admin")  // provide a value into inputbox
-    cy.get("input[placeholder='Username']").should('have.value','Admin') // value
-
-  })
-})
+    // Assert that a "no results" message is displayed
+    cy.contains('Sorry, no results found!').should('be.visible');
+  });
+});
