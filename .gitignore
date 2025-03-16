@@ -1,4 +1,13 @@
-node_modules/
-logs/
 .env
-cypress/videos/
+node_modules/
+package-lock.json
+dist/
+.vscode/
+.DS_Store
+playwright-report/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
