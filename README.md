@@ -8,17 +8,20 @@ From the root folder:
 ```
 npm init -y
 ```
+
 ### Core stack
 ```
-npm install express node react react-dom typescript 
+npm install express node typescript
 ```
+
 ### Testing frameworks
 ```
 npm install cypress mocha chai jest ts-jest @playwright/test
 ```
+
 ### Dev dependencies
 ```
-npm install @types/node @types/express @types/react @types/react-dom @types/mocha @types/chai @types/jest scss
+npm install @types/node @types/express @types/mocha @types/chai @types/jest scss dotenv mysql2 bcrypt nodemon
 ```
 
 
@@ -26,83 +29,99 @@ npm install @types/node @types/express @types/react @types/react-dom @types/moch
 
 ```
 /FullStackUltimateRepo
-│
-├── package.json              # Unified dependencies
-├── package-lock.json         
+│        
 ├── node_modules/             # Single shared node_modules
-│
-├── frontend/                 # React + TypeScript app
-│   ├── src/
-│   │   ├── App.tsx
-│   │   └── index.tsx
-│   ├── public/
-│   └── tsconfig.json
-│
-├── backend/                  # Node + Express backend API
-│   ├── src/
-│   │   └── server.ts
-│   └── tsconfig.json
-│
-├── scripts/                  # JSON scripting, AJAX, Vanilla JS demos
-│   ├── vanilla-js/
-│   │   └── fetchData.js
-│   └── json-scripting/
-│       └── data.json
-│
-├── tests/                    # Testing setup for all frameworks
-│   ├── cypress/
-│   │   └── integration/
-│   │       └── frontend_test.cy.js
-│   │
-│   ├── mocha-chai/
-│   │   └── backend_api.test.ts
-│   │
-│   ├── jest/
-│   │   └── frontend_unit.test.ts
-│   │
-│   └── playwright/
-│       └── end_to_end.spec.ts
-│
-└── styles/                   # Frontend styling
-    ├── main.css
-    ├── main.scss
-    └── components.scss
-
+├── config/                   # Configuration files
+├── cypress/                  # Cypress tests
+├── database/                 # Database handling files
+├── mocha/                    # Mocha tests
+├── playwright/               # Playwright tests
+├── playwright-report/        # Playwright test reports
+├── scripts/                  # Utility scripts
+├── server/                   # Backend server
+├── test-results/             # Test output results
+├── test-examples/            # Sample tests
+├── typescript/               # TypeScript-specific code
+├── vanilla-js/               # Vanilla JavaScript exercises
+├── .gitignore                # Unified dependencies
+├── cypress.config.js         # Cypress configuration
+├── package-lock.json         # Lock file for dependencies
+├── package.json              # Project metadata and scripts
+├── playwright.config.ts      # Playwright configuration
+└── README.md                 # This file
 ```
 
 # 🚀 7. Run Everything!
-1️⃣ Start Frontend:
+
+1️⃣ Start Backend:
 ```
-npm run start:frontend
+npm run server
 ```
 
-2️⃣ Start Backend:
+2️⃣ Run Mocha/Chai tests:
+```
+npm run mocha
 ```
 
-npm run start:backend
+3️⃣ Open Cypress:
 ```
-3️⃣ Run Mocha/Chai tests:
+npm run cypress
+```
 
-```
-npm run test
-```
-4️⃣ Open Cypress:
-
-```
-npm run cypress:open
-```
-5️⃣ Run Jest tests:
-
+4️⃣ Run Jest tests:
 ```
 npm run test:jest
 ```
-6️⃣ Run Playwright tests:
 
+5️⃣ Run Playwright tests:
 ```
 npm run test:playwright
 ```
-7️⃣ Run both backend & frontend together:
 
+6️⃣ Run both backend & frontend together:
 ```
 npm run dev
 ```
+
+
+# 📦 package.json
+
+```json
+{
+  "name": "practice-javascript",
+  "version": "1.0.0",
+  "description": "This repo contains JavaScript exercises covering basics, DSA, Node.js, Cypress, and Playwright.",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server/app.js",
+    "mocha": "mocha mocha/",
+    "cypress": "cypress open",
+    "test:jest": "jest",
+    "test:playwright": "npx playwright test",
+    "dev": "concurrently \"npm run server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "@types/node": "^22.13.10",
+    "@types/express": "^4.17.17",
+    "@types/mocha": "^11.0.4",
+    "@types/chai": "^5.2.0",
+    "@types/jest": "^29.5.3",
+    "bcrypt": "^5.1.1",
+    "chai": "^5.2.0",
+    "cypress": "^14.2.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jest": "^29.7.0",
+    "mocha": "^11.1.0",
+    "mysql2": "^3.13.0",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.8.2",
+    "concurrently": "^8.2.1"
+  }
+}
+```
+

@@ -23,3 +23,31 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+/// <reference types="Cypress" />
+/// <reference types="cypress-xpath" />
+
+Cypress.Commands.add('getIframe',(iframe)=>{
+    return cy.get(iframe)
+    .get("0.contentDocument.body")
+    .should('be.visible')
+    .then(cy.wrap);
+})
+
+Cypress.Commands.add('clickLink',(label)=>{
+    cy.get('a').contains(label).click();
+})
+
+// Overwrite contains()
+
+// Cypress.Commands.overwrite('contains',(originalFn, subject, filter, text, options = {})=>{
+//     // determine if a filter argument was passed
+//     if(typeof text === 'object') {
+//         options = text
+//         text = filter
+//         filter = undefined
+//     }
+//     options.matchCase = false
+//     return originalFn(subject, filter, text, options)
+// })
