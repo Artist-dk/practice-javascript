@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This repo contains JavaScript exercises covering basics, DSA, Node.js, Cypress, and Playwright.",
   "main": "index.js",
+  "testFiles": "**/*.{feature,features}",
   "scripts": {
     "mocha": "mocha mocha/",
     "server": "nodemon server/app.js",
@@ -12,16 +13,23 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
     "@playwright/test": "^1.51.0",
     "@types/node": "^22.13.10",
     "bcrypt": "^5.1.1",
     "chai": "^5.2.0",
     "cypress": "^14.2.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mocha": "^11.1.0",
     "mysql2": "^3.13.0",
     "nodemon": "^3.1.9",
     "typescript": "^5.8.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
   }
 }

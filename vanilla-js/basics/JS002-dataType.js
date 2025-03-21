@@ -58,4 +58,3 @@ console.log("Type of id1:", typeof id1);
 console.log("Type of bigNumber:", typeof bigNumber);
 console.log("Type of person:", typeof person);
 console.log("Type of hobbies:", typeof hobbies);
-
