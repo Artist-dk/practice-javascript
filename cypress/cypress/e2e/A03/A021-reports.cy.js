@@ -41,8 +41,8 @@ describe("Assertions", () => {
         cy.xpath("//a").should('have.length', '5') // No of links
         // .and('exist')
 
-        cy.get("input[placeholder='username']").type("Amdin")
-        cy.get("input[placeholder='Username']").should('hove.value', 'Admin')
+        cy.get("input[placeholder='Username']").type("Admin")
+        cy.get("input[placeholder='Username']").should('have.value', 'Admin')
     })
 
     it("explicit assertions", () => {
